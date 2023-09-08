@@ -62,9 +62,6 @@
 #ifdef CONFIG_COMPAT
 #include <linux/compat.h>
 #endif
-#include <linux/hardware_info.h>
-
-extern void get_hardware_info_data(enum hardware_id id, const void *data);
 
 struct egisfp_dev_t *g_data = NULL;
 DECLARE_BITMAP(minors, N_SPI_MINORS);
@@ -1432,7 +1429,6 @@ int egisfp_probe(struct platform_device *pdev)
 
 
 	g_data = egis_dev;
-    get_hardware_info_data(HWID_FINGERPRINT,"egistec:EC617");
 
 	DEBUG_PRINT(" %s : initialize success %d\n", __func__, status);
 
