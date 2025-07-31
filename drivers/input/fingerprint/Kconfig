@@ -1,0 +1,7 @@
+config EGIS_FINGERPRINT
+	tristate "Egistec fingerprint"
+	help
+	  Say Y here if you have a Egistec fingerprint.
+	  Say M, compile into a module.
+
+	  If unsure, say N.
